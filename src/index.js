@@ -4,7 +4,7 @@
 module.exports = function towelSort (matrix) {
   if (!matrix) return [];
 
-  matrix.reduce(acc, cur, i)
-
-  return acc.concat((!(i % 2) ? cur : cur.reverse()));
+  return matrix.reduce((acc, cur, i) => {
+    return acc.concat((!(i % 2) ? cur : cur.reverse()));
+  }, [])
 }
